@@ -87,7 +87,7 @@
       font-size: 1.2rem;
     }
 
-    /* Commit 6: Attribute selectors for links and inputs */
+      /* Commit c6: Attribute selectors for links and inputs */
     a[href^="http"] {
       color: darkgreen;
     }
@@ -111,6 +111,15 @@
 
     input:focus {
       outline: 2px solid blue;
+    }
+
+    /* Commit 8: Added pseudo-elements ::before and ::after for specific links */
+    a[href^="http"]::after {
+      content: " (external link)";
+    }
+
+    a[href$=".pdf"]::before {
+      content: "(PDF) ";
     }
 
   </style>
