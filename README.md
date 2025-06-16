@@ -4,7 +4,6 @@ Welcome to my CSS dojo.
 This repo continues where [PCS-APP](https://github.com/TartsRGL/PCS-APP) left off – diving deeper into the world of CSS.  
 It’s not just about writing styles. It’s about **understanding** them – and breaking them when needed.
 
-![PCS-CSS Banner](./assets/pcs-css-banner.png) <!-- Nahraď dle potřeby -->
 
 ---
 
