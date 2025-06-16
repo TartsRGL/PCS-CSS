@@ -52,8 +52,9 @@ It’s not a textbook – it’s a trajectory.
    git clone https://github.com/TartsRGL/PCS-CSS.git
 
 2. Navigate to a lesson:
-
-   ¨cd PCS-CSS/Lesson-01
+   
+   ```bash
+   cd PCS-CSS/L1_CSS SELECTORS
 
 3. Open index.html in your browser and enjoy the ride.
 
@@ -62,9 +63,7 @@ It’s not a textbook – it’s a trajectory.
 🔮 Coming Soon
 
    * More layout challenges (Grid, dark mode, animations)
-
    * Real-world components (forms, modals, UI fragments)
-
    * Thematic styles (light/dark switch, a11y focus)
 
 🧠 Why PCS-CSS?
