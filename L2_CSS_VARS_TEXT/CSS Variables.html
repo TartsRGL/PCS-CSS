@@ -7,6 +7,21 @@
   <title>Text Styling Lecture Example</title>
   <style>
     /* Commit 1: Add base HTML structure and prepare empty style section */
+
+    /* Commit 2: Define CSS variables and apply base body styles */
+    :root {
+      --primary-color: #1f3b99;
+      --secondary-color: #cc2255;
+      --background-color: #d5f4f4;
+    }
+
+    body {
+      font-family: Georgia, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--primary-color);
+      background-color: var(--background-color);
+      padding: 20px;
+    }
   </style>
 </head>
 
