@@ -26,13 +26,11 @@ git commit -m "style: Add nth-child zebra striping for table rows"
 git commit -m "chore: Final polish and selector overrides"
 ```
 
-🔗 Related LinkedIn post: [POST 2 – Selector Madness™](https://www.linkedin.com/in/antoninpergl/...)
 
 📁 Back to repo: [PCS-CSS](https://github.com/TartsRGL/PCS-CSS)
 
 ---
 
-### 🙏 Acknowledgments
-Special thanks to [Praha Coding School](https://prahacoding.cz)  
-and [Mr. Wernerdweight](https://github.com/wernerdweight)  
-for their guidance and inspiration.
+### 🙏 Acknowledgment
+
+Special thanks to Praha Coding School and Mr. Wernerdweight for their guidance and inspiration.
