@@ -1,7 +1,6 @@
 # Lesson 2 – CSS Variables & Text
 
-This folder contains the HTML & CSS code for Lesson 2  
-of the PCScss series.  
+This folder contains the HTML & CSS code for Lesson 2 of the PCScss series.  
 
 It demonstrates:
 
@@ -32,7 +31,7 @@ git commit -m "chore: Add justified alignment to .lorem paragraph"
 
 ---
 
-📁 Back to repo: PCS-CSS
+[📁 Back to repo: PCS-CSS](https://github.com/TartsRGL/PCS-CSS/blob/main/L2_CSS_VARS_TEXT/L2_readme.md)
 
 ---
 
