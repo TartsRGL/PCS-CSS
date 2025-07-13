@@ -54,7 +54,7 @@ It’s not a textbook – it’s a trajectory.
 2. Navigate to a lesson:
    
    ```bash
-   cd PCS-CSS/L1_CSS SELECTORS
+   cd "PCS-CSS/L1 CSS_selectors"
 
 3. Open index.html in your browser and enjoy the ride.
 
