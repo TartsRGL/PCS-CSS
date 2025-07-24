@@ -7,12 +7,75 @@
   <title>Display Modes Lecture Example</title>
   <style>
     /* Commit 1: Init layout for display modes demo */
-    
+
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .container {
+      border: 2px solid #333;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* Commit 2: Add examples for block, inline and inline-block */
+
+    .block {
+      width: 100px;
+      height: 100px;
+      background-color: #3366ff;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    .inline-block {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      background-color: #ff3366;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+    }
+
+    .inline {
+      display: inline;
+      background-color: #33cc33;
+      color: white;
+      padding: 5px 10px;
+      margin-right: 10px;
+    }
   </style>
 </head>
 
 <body>
   <h1>Display Modes Lecture</h1>
+
+  <div class="container">
+    <h2>Block</h2>
+    <div class="block">Block</div>
+    <div class="block">Block</div>
+  </div>
+
+  <div class="container">
+    <h2>Inline-Block</h2>
+    <div class="inline-block">Inline-Block</div>
+    <div class="inline-block">Inline-Block</div>
+  </div>
+
+  <div class="container">
+    <h2>Inline</h2>
+    <span class="inline">Inline</span>
+    <span class="inline">Inline</span>
+    <span class="inline">Inline</span>
+    <span class="inline">Inline</span>
+  </div>
 </body>
 
 </html>
