@@ -57,6 +57,23 @@
     .none {
       display: none;
     }
+
+    /* Commit 4: Add Flexbox layout with styled items */
+
+    .flex-container {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .flex-item {
+      width: 100px;
+      height: 100px;
+      background-color: #ff9900;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      margin-right: 10px;
+    }
   </style>
 </head>
 
@@ -87,6 +104,15 @@
     <h2>None</h2>
     <div class="none">None</div>
     <p>This element has display set to none, so it's not visible.</p>
+  </div>
+
+  <div class="container">
+    <h2>Flexbox</h2>
+    <div class="flex-container">
+      <div class="flex-item">Flex Item 1</div>
+      <div class="flex-item">Flex Item 2</div>
+      <div class="flex-item">Flex Item 3</div>
+    </div>
   </div>
 </body>
 
