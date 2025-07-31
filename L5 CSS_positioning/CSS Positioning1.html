@@ -45,7 +45,6 @@
       margin-bottom: 20px;
     }
 
-    
     /* Commit 4: style: Add absolute positioning styles with parent context */
     .absolute-container {
       position: relative;
@@ -53,10 +52,40 @@
       padding: 10px;
       margin-bottom: 20px;
     }
+    /* Relative positioned element */
+    .relative {
+      position: relative;
+      left: 30px;
+      background: #ff3366;
+      color: white;
+      padding: 10px;
+      width: 220px;
+      margin-bottom: 10px;
+    }
 
-    
-    /* Commit 5: style: Add fixed positioning for persistent element */
-    
+    /* Absolute positioned element */
+    .absolute {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      background: #33cc33;
+      color: white;
+      padding: 10px;
+      width: 220px;
+    }
+
+    /* Fixed positioned element */
+    .fixed {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #333;
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+    }
     /* Commit 6: style: Add sticky positioning with scrollable container */
     .sticky-container {
       height: 300px;
@@ -72,9 +101,6 @@
       color: white;
       padding: 10px;
     }
-
-
-
 
 </style>
 </head>
