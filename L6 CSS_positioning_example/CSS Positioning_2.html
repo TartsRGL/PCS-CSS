@@ -7,6 +7,44 @@
     <title>
         Recepty
     </title>
+    <!-- Commit 3: feat: Add styling variables and base styles -->
+    <style>
+        :root {
+            --primarycolor: blueviolet;
+            --gap: 1rem;
+            --box-padding: 2rem;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--primarycolor);
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .container {
+            display: flex;
+            gap: var(--gap);
+        }
+        img {
+            border: 2px solid var(--primarycolor);
+            padding: var(--box-padding);
+            border-radius: 5px;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
 
