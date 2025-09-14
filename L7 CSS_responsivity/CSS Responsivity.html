@@ -1,10 +1,32 @@
-    <!-- Commit 1: feat: Add base HTML structure for responsive layout -->
+<!-- Commit 1: feat: Add base HTML structure for responsive layout -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>L7 – Media Queries (Progressive)</title>
+
+  <!-- Commit 2: feat: Add base styles and layout containers -->
+  <style>
+    /* Base reset & typography */
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; line-height: 1.5; }
+
+    /* Header banner */
+    header { background: #4CAF50; color: #fff; text-align: center; padding: 1rem; }
+
+    /* Layout container */
+    .container { display: flex; flex-wrap: wrap; gap: 1rem; padding: 1rem; }
+
+    /* Base card */
+    .container > section {
+      background: #f4f6f8;
+      border: 1px solid #e3e7eb;
+      border-radius: .5rem;
+      padding: 2rem;
+      flex: 1 1 auto; /* width logic will come later (next commits) */
+    }
+  </style>
 </head>
 <body>
   <header>
