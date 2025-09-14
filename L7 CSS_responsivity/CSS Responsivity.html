@@ -19,6 +19,9 @@
       --card-radius: .5rem;
       /* Commit 4: desktop column count */
       --cols-desktop: 3;
+      /* Commit 5: add tablet/mobile column counts */
+      --cols-tablet: 2;
+      --cols-mobile: 1;
     }
 
     /* Base reset & typography */
@@ -47,6 +50,18 @@
     .box-4 { /* slightly wider card (uses cols - 1) */
       flex-basis: calc((100% - (var(--cols-desktop) - 1) * var(--gap)) / (var(--cols-desktop) - 1));
     }
+
+    /* Commit 5: media queries (tablet → 2 cols, mobile → 1 col) + teaching colors */
+    @media (max-width: 1024px){
+      body{ background: #fff7f7; } /* teaching color: tablet */
+      .container > section{
+        flex-basis: calc((100% - (var(--cols-tablet) - 1) * var(--gap)) / var(--cols-tablet));
+      }
+    }
+    @media (max-width: 768px){
+      body{ background: #f5faff; } /* teaching color: mobile */
+      .container > section{ flex-basis: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -65,3 +80,4 @@
   </main>
 </body>
 </html>
+```
