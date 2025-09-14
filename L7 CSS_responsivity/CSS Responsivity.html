@@ -17,6 +17,8 @@
       --card-bg: #f4f6f8;
       --card-border: #e3e7eb;
       --card-radius: .5rem;
+      /* Commit 4: desktop column count */
+      --cols-desktop: 3;
     }
 
     /* Base reset & typography */
@@ -35,7 +37,15 @@
       border: 1px solid var(--card-border);
       border-radius: var(--card-radius);
       padding: var(--card-pad);
-      flex: 1 1 auto; /* width logic will come later (next commits) */
+      flex: 1 1 auto; /* baseline; width is overridden by .box-* and @media */
+    }
+
+    /* Commit 4: desktop column sizing (box-3 / box-4) */
+    .box-3 { /* 3 columns on desktop */
+      flex-basis: calc((100% - (var(--cols-desktop) - 1) * var(--gap)) / var(--cols-desktop));
+    }
+    .box-4 { /* slightly wider card (uses cols - 1) */
+      flex-basis: calc((100% - (var(--cols-desktop) - 1) * var(--gap)) / (var(--cols-desktop) - 1));
     }
   </style>
 </head>
@@ -45,12 +55,13 @@
   </header>
 
   <main class="container">
-    <section>Box 1</section>
-    <section>Box 2</section>
-    <section>Box 3</section>
-    <section>Box 4</section>
-    <section>Box 5</section>
-    <section>Box 6</section>
+    <!-- Commit 4: add sizing classes -->
+    <section class="box box-3">Box 1</section>
+    <section class="box box-4">Box 2</section>
+    <section class="box box-3">Box 3</section>
+    <section class="box box-4">Box 4</section>
+    <section class="box box-3">Box 5</section>
+    <section class="box box-4">Box 6</section>
   </main>
 </body>
 </html>
