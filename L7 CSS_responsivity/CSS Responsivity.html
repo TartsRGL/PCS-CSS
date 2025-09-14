@@ -51,17 +51,20 @@
       flex-basis: calc((100% - (var(--cols-desktop) - 1) * var(--gap)) / (var(--cols-desktop) - 1));
     }
 
-    /* Commit 5: media queries (tablet → 2 cols, mobile → 1 col) + teaching colors */
+    /* Commit 5: media queries (tablet → 2 cols, mobile → 1 col) */
     @media (max-width: 1024px){
       body{ background: #fff7f7; } /* teaching color: tablet */
+      header{ background: #ff6b6b; } /* Commit 6: clearer breakpoint signal */
       .container > section{
         flex-basis: calc((100% - (var(--cols-tablet) - 1) * var(--gap)) / var(--cols-tablet));
       }
     }
     @media (max-width: 768px){
       body{ background: #f5faff; } /* teaching color: mobile */
+      header{ background: #60a5fa; } /* Commit 6: clearer breakpoint signal */
       .container > section{ flex-basis: 100%; }
     }
+    /* Commit 6: final tidy & visibility – added header color change inside MQ for easy verification */
   </style>
 </head>
 <body>
@@ -80,4 +83,3 @@
   </main>
 </body>
 </html>
-```
