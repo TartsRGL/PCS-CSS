@@ -10,6 +10,7 @@ It demonstrates:
 Each commit adds one layer step-by-step until the final responsive layout.
 
 ---
+
 ## 📌 Commits overview
 
 ```bash
@@ -19,6 +20,7 @@ git commit -m "feat: Introduce CSS variables"
 git commit -m "feat: Add desktop column sizing (box-3 / box-4)"
 git commit -m "feat: Add media queries for tablet and mobile"
 git commit -m "chore: Final tidy & breakpoint visibility"
+```
 ---
 
 📁 Back to repo: [PCS-CSS](https://github.com/TartsRGL/PCS-CSS)
