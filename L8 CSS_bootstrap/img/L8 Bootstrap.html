@@ -10,6 +10,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image Gallery</title>
+  <!-- Commit 4 – Apply flexbox layout with responsive image styling and order -->
+  <style>
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .gallery img {
+      max-width: 100%;
+      height: auto;
+    }
+    .first {
+      order: -10;
+    }
+    .second {
+      order: -8;
+    }
+  </style>
 </head>
 
 <body>
