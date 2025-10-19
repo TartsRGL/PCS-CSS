@@ -61,12 +61,26 @@
       position:absolute; right:20px; bottom:20px; width:260px; height:110px; border-radius:12px;
       background:var(--peach); display:grid; place-items:center; color:#0a0e16; font-weight:700;
     }
+
+    /* Commit 4 – Add isolation layer example */
+    .island{
+      position:relative; isolation:isolate; height:180px; background:var(--elev);
+      border:1px dashed #2a3347; border-radius:12px; padding:12px; margin-top:16px;
+    }
+    .floating{
+      position:absolute; right:20px; top:20px; width:160px; height:70px; background:var(--pink);
+      border-radius:12px; display:grid; place-items:center; color:#222; font-weight:700; z-index:2;
+    }
+    .base{
+      position:absolute; left:20px; bottom:20px; width:200px; height:100px; background:var(--blue);
+      border-radius:12px; display:grid; place-items:center; color:#222; font-weight:700;
+    }
   </style>
 </head>
 <body>
   <header class="site-header">
     <strong>L9 — Z-index (Lite)</strong>
-    <span class="note">Commit 3 – stacking context demo</span>
+    <span class="note">Commit 4 – isolation layer</span>
   </header>
 
   <main class="wrap">
@@ -84,6 +98,13 @@
       <div class="context">
         <div class="chip">.chip (z:9999)</div>
         <div class="block">peer block</div>
+      </div>
+
+      <h2>Isolation layer</h2>
+      <p class="note"><code>isolation:isolate</code> creates a local stacking context, keeping its z-index layers separate.</p>
+      <div class="island">
+        <div class="floating">floating (z:2)</div>
+        <div class="base">base (z:auto)</div>
       </div>
     </section>
   </main>
