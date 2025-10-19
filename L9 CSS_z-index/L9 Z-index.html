@@ -8,6 +8,7 @@
   <style>
     :root{
       --ink:#e8eaed; --muted:#9aa0a6; --surface:#151922; --elev:#1c2230;
+      --blue:#cfe0ff; --peach:#ffe4c2; --pink:#ffd0df;
     }
     *{box-sizing:border-box}
     body{
@@ -30,18 +31,38 @@
     }
     .panel h2{margin:0 0 8px;}
     .note{color:var(--muted); font-size:14px;}
+
+    /* Commit 2 – Add overlapping cards with z-index layering */
+    /* Overlapping cards setup */
+    .stage{
+      position:relative; height:320px; background:var(--elev);
+      border-radius:12px; border:1px dashed #2a3347; margin-top:12px;
+    }
+    .card{
+      position:absolute; width:210px; height:120px; border-radius:12px;
+      display:grid; place-items:center; font-weight:700; color:#0a0e16;
+      box-shadow:0 10px 22px rgba(0,0,0,.35);
+    }
+    .a{left:24px; top:24px; background:var(--blue);}
+    .b{left:100px; top:92px; background:var(--peach); z-index:2;}
+    .c{left:176px; top:160px; background:var(--pink); z-index:1;}
   </style>
 </head>
 <body>
   <header class="site-header">
     <strong>L9 — Z-index (Lite)</strong>
-    <span class="note">Commit 1 – basic structure</span>
+    <span class="note">Commit 2 – overlapping cards</span>
   </header>
 
   <main class="wrap">
     <section class="panel">
       <h2>Overlapping cards</h2>
-      <p class="note">Basic page structure for the Z-index lesson.</p>
+      <p class="note">Card .b has z-index:2, card .c has z-index:1, and card .a has no z-index (default stacking).</p>
+      <div class="stage">
+        <div class="card a">card .a</div>
+        <div class="card b">card .b (on top)</div>
+        <div class="card c">card .c</div>
+      </div>
     </section>
   </main>
 </body>
