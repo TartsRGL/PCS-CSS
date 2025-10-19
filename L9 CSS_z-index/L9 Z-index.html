@@ -46,12 +46,27 @@
     .a{left:24px; top:24px; background:var(--blue);}
     .b{left:100px; top:92px; background:var(--peach); z-index:2;}
     .c{left:176px; top:160px; background:var(--pink); z-index:1;}
+
+    /* Commit 3 – Demonstrate new stacking context (transform) */
+    .context{
+      position:relative; height:220px; margin-top:12px;
+      border-radius:12px; border:1px dashed #2a3347; background:var(--elev);
+      transform:translateZ(0); /* creates a new stacking context */
+    }
+    .chip{
+      position:absolute; left:20px; top:20px; padding:8px 12px; border-radius:999px;
+      background:var(--blue); color:#0a0e16; font-weight:700; z-index:9999;
+    }
+    .block{
+      position:absolute; right:20px; bottom:20px; width:260px; height:110px; border-radius:12px;
+      background:var(--peach); display:grid; place-items:center; color:#0a0e16; font-weight:700;
+    }
   </style>
 </head>
 <body>
   <header class="site-header">
     <strong>L9 — Z-index (Lite)</strong>
-    <span class="note">Commit 2 – overlapping cards</span>
+    <span class="note">Commit 3 – stacking context demo</span>
   </header>
 
   <main class="wrap">
@@ -62,6 +77,13 @@
         <div class="card a">card .a</div>
         <div class="card b">card .b (on top)</div>
         <div class="card c">card .c</div>
+      </div>
+
+      <h2>New stacking context (transform)</h2>
+      <p class="note">Parent with <code>transform: translateZ(0)</code> creates its own stacking context. The blue chip (z:9999) can't overlap outside this box.</p>
+      <div class="context">
+        <div class="chip">.chip (z:9999)</div>
+        <div class="block">peer block</div>
       </div>
     </section>
   </main>
