@@ -11,7 +11,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-    }
+    }   
 
     body {
       font-family: Arial, sans-serif;
@@ -25,6 +25,7 @@
     .container { text-align: center; }
 
     h1 { margin-bottom: 1.5rem; }
+    h2 { margin-bottom: 1rem; }   
 
     .boxes {
       display: flex;
@@ -36,19 +37,28 @@
       width: 120px;
       height: 120px;
       background: #3498db;
-      color: white;
+      color: white;  
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 8px;
       font-size: 1.1rem;
+      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Commit 3 – hover transitions for Box 1 */
+    .box1:hover {
+      background: #2ecc71;
+      transform: scale(1.08);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.18);
     }
   </style>
 </head>
 
 <body>
   <section class="container">
-    <h1>Animated Boxes – Basic Html & Css</h1>
+    <h1>Animated Boxes</h1>
+      <h2>Hover over Box 1 - transition effect</h2>
     <div class="boxes">
       <div class="box box1">Box 1</div>
       <div class="box box2">Box 2</div>
