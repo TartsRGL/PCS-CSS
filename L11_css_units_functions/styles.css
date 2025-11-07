@@ -15,7 +15,7 @@
   --accent: #7cc5ff;
 
   /* container width */
-  --container-max: 68rem;
+    --container-max: 68rem;
 }
 
 * { box-sizing: border-box; }
@@ -187,4 +187,29 @@ p {
 
 .btn-hero:hover {
   background: #98d3ff;
+}
+
+/* Commit 6: Responsive cards with clamp() gaps + minmax grid */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: clamp(1rem, 2vw, 2.5rem);
+  margin-top: var(--space-4);
+}
+
+.card {
+  background: #1d222b;
+  border-radius: 10px;
+  padding: var(--space-3);
+  text-align: center;
+  font-weight: 500;
+  color: var(--text);
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  background: #222836;
 }
