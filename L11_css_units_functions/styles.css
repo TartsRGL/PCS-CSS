@@ -216,7 +216,7 @@ p {
 
 /* Commit 7: Utility classes for fluid width and accent buttons */
 
-/* Fluid container — expands to full viewport width */
+/* 1️⃣ Fluid container — expands to full viewport width */
 .fluid {
   width: 100%;
   max-width: none;
@@ -224,7 +224,7 @@ p {
   padding-inline: clamp(1rem, 4vw, 3rem);
 }
 
-/* Accent button — reusable variant of hero button */
+/* 2️⃣ Accent button — reusable variant of hero button */
 .btn {
   display: inline-block;
   padding: 0.6em 1.2em;
@@ -244,11 +244,47 @@ p {
   transform: translateY(-2px);
 }
 
-/* Subtle text helpers */
+/* 3️⃣ Subtle text helpers */
 .text-center { text-align: center; }
 .text-muted  { color: var(--muted); }
 
-/* Margin helpers */
+/* 4️⃣ Margin helpers */
 .mt-2 { margin-top: var(--space-2); }
 .mt-3 { margin-top: var(--space-3); }
 .mt-4 { margin-top: var(--space-4); }
+
+/* Commit 8: Final polish and teaching notes
+   -----------------------------------------
+   - unify border radius scale
+   - refine spacing consistency
+   - add footer note for teaching clarity
+*/
+
+/* 1️⃣ Unified radius for all cards, demos, and containers */
+.demo,
+.text-scale,
+.card,
+.hero {
+  border-radius: 12px;
+}
+
+/* 2️⃣ Consistent spacing bottom for sections */
+section {
+  margin-bottom: var(--space-4);
+}
+
+/* 3️⃣ Slightly softer shadow for subtle depth */
+.card {
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+}
+
+/* 4️⃣ Teaching reference block */
+:root::after {
+  content: "Lesson 11 • Modern Units & Functions • clamp(), min(), max(), rem, em, vw, vh";
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: var(--space-4);
+  padding-bottom: var(--space-3);
+}
