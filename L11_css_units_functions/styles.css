@@ -111,3 +111,35 @@ p {
   margin-bottom: var(--space-2);
   width: max(40%, 20rem);   /* never smaller than 20rem */
 }
+
+/* Commit 4: Spacing scale in rem + nested em demo */
+
+/* New demo article */
+.text-scale {
+  margin-top: var(--space-3);
+  padding: var(--space-3);
+  background: #1d222b;
+  border-radius: 10px;
+}
+
+.text-scale h3 {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-2);
+  color: var(--accent);
+}
+
+.text-scale p {
+  margin-bottom: var(--space-1);
+}
+
+/* Nested block using em-relative scale */
+.nested {
+  margin-top: var(--space-2);
+  padding: 1.5em; /* depends on parent's font-size */
+  background: #262b36;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.nested p.small { font-size: 0.8em; }
+.nested p.big   { font-size: 1.25em; }

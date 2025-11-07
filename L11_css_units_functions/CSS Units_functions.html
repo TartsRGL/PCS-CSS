@@ -1,4 +1,4 @@
-<!-- Commit 3: affects .demo width and adds ::before via CSS -->
+<!-- Commit 1: Add basic structure & root variables -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -23,10 +23,23 @@
          modern CSS units and math functions.</p>
     </section>
 
-    <!-- Commit 3 → CSS now applies min()/max() to this section -->
+    <!-- Commit 3 → CSS affects this block (min()/max()) -->
     <section class="demo">
       <h2>Demo Area</h2>
       <p>This section will evolve in later commits.</p>
+
+      <!-- Commit 4: rem vs em nested example -->
+      <article class="text-scale">
+        <h3>rem vs em example</h3>
+        <p>Outer text uses base size (1rem). Inside a nested block below,
+           all spacing and font sizing are relative to its own parent.</p>
+
+        <div class="nested">
+          <p>This is nested <strong>1em</strong> base text.</p>
+          <p class="small">Smaller text at 0.8em</p>
+          <p class="big">Bigger text at 1.25em</p>
+        </div>
+      </article>
     </section>
   </main>
 
