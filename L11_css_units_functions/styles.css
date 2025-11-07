@@ -61,3 +61,32 @@ main{ padding-block: var(--space-4); }
 }
 
 .intro{ margin-bottom: var(--space-3); }
+
+/* Commit 2: Introduce fluid typography with clamp() */
+
+/* Fluid type scale — grows between min, pref, max */
+h1.title {
+  font-size: clamp(1.8rem, 3vw + 1rem, 3rem);
+  color: var(--accent);
+  letter-spacing: 0.03em;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 1.2vw + 0.6rem, 1.25rem);
+}
+
+h2 {
+  font-size: clamp(1.3rem, 1.5vw + 0.8rem, 1.75rem);
+  margin-bottom: var(--space-2);
+}
+
+p {
+  font-size: clamp(0.95rem, 0.4vw + 0.8rem, 1.1rem);
+  color: var(--muted);
+}
+
+/* small refinement for footer text */
+.site-footer small {
+  font-size: clamp(0.8rem, 0.3vw + 0.7rem, 0.9rem);
+  color: var(--muted);
+}
