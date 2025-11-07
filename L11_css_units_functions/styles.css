@@ -1,0 +1,63 @@
+/* Commit 1: Add basic structure & root variables */
+:root{
+  /* base scale */
+  --base-size: 16px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+
+  /* colors */
+  --bg: #0f1115;
+  --surface: #171a21;
+  --text: #e9eef5;
+  --muted: #a8b3c7;
+  --accent: #7cc5ff;
+
+  /* container width */
+  --container-max: 68rem;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: var(--base-size); }
+
+body{
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: system-ui, -apple-system, Segoe UI,
+               Roboto, Ubuntu, Cantarell, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.container{
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-2);
+}
+
+.site-header, .site-footer{
+  background: var(--surface);
+  padding-block: var(--space-3);
+}
+
+.title{
+  margin: 0 0 var(--space-1);
+}
+
+.subtitle{
+  margin: 0;
+  color: var(--muted);
+}
+
+main{ padding-block: var(--space-4); }
+
+.intro, .demo{
+  background: var(--surface);
+  padding: var(--space-3);
+  border-radius: 12px;
+}
+
+.intro{ margin-bottom: var(--space-3); }
