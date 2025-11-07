@@ -15,7 +15,7 @@
   --accent: #7cc5ff;
 
   /* container width */
-    --container-max: 68rem;
+  --container-max: 68rem;
 }
 
 * { box-sizing: border-box; }
@@ -213,3 +213,42 @@ p {
   transform: translateY(-4px);
   background: #222836;
 }
+
+/* Commit 7: Utility classes for fluid width and accent buttons */
+
+/* Fluid container — expands to full viewport width */
+.fluid {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: clamp(1rem, 4vw, 3rem);
+}
+
+/* Accent button — reusable variant of hero button */
+.btn {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  border-radius: 0.5em;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.btn-accent:hover {
+  background: #98d3ff;
+  transform: translateY(-2px);
+}
+
+/* Subtle text helpers */
+.text-center { text-align: center; }
+.text-muted  { color: var(--muted); }
+
+/* Margin helpers */
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
