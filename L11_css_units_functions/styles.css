@@ -90,3 +90,24 @@ p {
   font-size: clamp(0.8rem, 0.3vw + 0.7rem, 0.9rem);
   color: var(--muted);
 }
+/* Commit 3: Width constraints with min() / max() */
+
+/* Demonstrate flexible container width */
+.demo {
+  /* keep padding from before */
+  width: min(90%, 60rem);   /* never wider than 60rem */
+  margin-inline: auto;
+}
+
+/* Add an inner box to show max() behavior */
+.demo::before {
+  content: "Resizable box using max()";
+  display: block;
+  background: var(--accent);
+  color: var(--bg);
+  text-align: center;
+  padding: var(--space-2);
+  border-radius: 8px;
+  margin-bottom: var(--space-2);
+  width: max(40%, 20rem);   /* never smaller than 20rem */
+}
