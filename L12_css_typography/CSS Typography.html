@@ -5,10 +5,12 @@
   <meta charset="UTF-8">
   <title>PCScss L12 – Advanced Typography</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Commit 6 – Add custom web font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Merriweather&display=swap" rel="stylesheet">
   <style>
     /* Commit 2 – Add base typography styles */
     body {
-      font-family: system-ui, sans-serif;
+      font-family: 'Merriweather', serif;
       font-size: 1.125rem;
       color: #222;
       line-height: 1.7;
@@ -17,6 +19,8 @@
       background: #fafaf9;
     }
     h1, h2 {
+      /* Commit 6 – Use Inter font for headlines */
+      font-family: 'Inter', system-ui, sans-serif;
       font-weight: 700;
       line-height: 1.2;
       margin-top: 2.5rem;
@@ -40,11 +44,9 @@
     }
     p {
       margin-bottom: 1.25rem;
-      /* Commit 5 – Enable automatic hyphenation */
-      hyphens: auto;        /* allows browser to hyphenate long words */
-      overflow-wrap: break-word; /* ensures long words break if needed */
+      hyphens: auto;
+      overflow-wrap: break-word;
     }
-    /* Commit 4 – Introduce text-overflow & ellipsis */
     .ellipsis-demo {
       margin: 2.5rem auto 0 auto;
       max-width: 400px;
@@ -69,7 +71,6 @@
       <p lang="en">
         Nullam feugiat, tortor nec commodo ultrices, sapien nisi dictum enim, et dictum odio orci a ex. Suspendisse potenti. Supercalifragilisticexpialidocious pseudopseudohypoparathyroidism.
       </p>
-      <!-- Commit 4 – Introduce text-overflow & ellipsis -->
       <div class="ellipsis-demo" title="Full text: This sentence is intentionally very long to demonstrate text-overflow.">
         This sentence is intentionally very long to demonstrate text-overflow.
       </div>
