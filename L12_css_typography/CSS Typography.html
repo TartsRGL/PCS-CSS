@@ -40,6 +40,9 @@
     }
     p {
       margin-bottom: 1.25rem;
+      /* Commit 5 – Enable automatic hyphenation */
+      hyphens: auto;        /* allows browser to hyphenate long words */
+      overflow-wrap: break-word; /* ensures long words break if needed */
     }
     /* Commit 4 – Introduce text-overflow & ellipsis */
     .ellipsis-demo {
@@ -60,11 +63,11 @@
     <h1>Advanced Typography Demo</h1>
     <section>
       <h2>Sample Article</h2>
-      <p>
+      <p lang="en">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec augue nec urna cursus tristique. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
       </p>
-      <p>
-        Nullam feugiat, tortor nec commodo ultrices, sapien nisi dictum enim, et dictum odio orci a ex. Suspendisse potenti.
+      <p lang="en">
+        Nullam feugiat, tortor nec commodo ultrices, sapien nisi dictum enim, et dictum odio orci a ex. Suspendisse potenti. Supercalifragilisticexpialidocious pseudopseudohypoparathyroidism.
       </p>
       <!-- Commit 4 – Introduce text-overflow & ellipsis -->
       <div class="ellipsis-demo" title="Full text: This sentence is intentionally very long to demonstrate text-overflow.">
