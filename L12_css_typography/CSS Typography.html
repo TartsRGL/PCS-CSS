@@ -19,7 +19,6 @@
       background: #fafaf9;
     }
     h1, h2 {
-      /* Commit 6 – Use Inter font for headlines */
       font-family: 'Inter', system-ui, sans-serif;
       font-weight: 700;
       line-height: 1.2;
@@ -27,7 +26,8 @@
       margin-bottom: 1rem;
     }
     h1 {
-      font-size: 2.5rem;
+      /* Commit 7 – Responsive font-size with clamp() */
+      font-size: clamp(2rem, 5vw, 3.5rem);
       margin-top: 2rem;
       text-align: center;
     }
@@ -46,6 +46,14 @@
       margin-bottom: 1.25rem;
       hyphens: auto;
       overflow-wrap: break-word;
+    }
+    /* Commit 7 – Multi-column layout for .multi-col */
+    .multi-col {
+      column-count: 2;
+      column-gap: 2rem;
+      /* Optional: add rule for better break */
+      orphans: 2;
+      widows: 2;
     }
     .ellipsis-demo {
       margin: 2.5rem auto 0 auto;
@@ -74,6 +82,11 @@
       <div class="ellipsis-demo" title="Full text: This sentence is intentionally very long to demonstrate text-overflow.">
         This sentence is intentionally very long to demonstrate text-overflow.
       </div>
+      <!-- Commit 7 – Multi-column demo -->
+      <h2>Multi-column Text Demo</h2>
+      <p class="multi-col" lang="en">
+        The multi-column layout module allows you to flow content into several columns, just like in newspapers or magazines. This paragraph demonstrates how you can easily create a two-column layout using only CSS. As you resize the window, the columns will automatically adjust. For longer texts, browser will try to balance the amount of text in each column. Try resizing the window to see the effect. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod turpis nec dui tristique, a feugiat leo dictum. Nullam malesuada ex at dui tempor, eu venenatis urna ullamcorper. Aliquam erat volutpat.
+      </p>
     </section>
   </main>
 </body>
