@@ -28,7 +28,7 @@
         }
 
         .form {
-            padding: 0 0.5rem; 
+            padding: 0 0.5rem; /* mezera vlevo/vpravo pro inputy */
         }
 
         .form-group {
@@ -41,9 +41,12 @@
             font-size: 0.95rem;
         }
 
-        input {
+        /* Commit 3 – transition for input state changes */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
             width: 100%;
-            box-sizing: border-box;  
+            box-sizing: border-box;
             padding: 0.6rem 0.75rem;
             border: 1px solid #ccc;
             border-radius: 4px;
@@ -55,9 +58,9 @@
 
         /* Commit 3 – highlight input on focus */
         input:focus {
-            border-color: #0074d9; 
-            background: #f0f8ff;   
-            outline: none;         
+            border-color: #0074d9; /* silný kontrast */
+            background: #f0f8ff;   /* jemná změna pozadí */
+            outline: none;         /* odstraní defaultní outline */
         }
 
         /* Commit 3 – clear ring for keyboard accessibility */
@@ -80,6 +83,78 @@
         button:hover {
             background: #005fa3;
         }
+
+        /* Commit 4 – custom checkbox style */
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .checkbox-label {
+            position: relative;
+            cursor: pointer;
+            padding-left: 2rem;
+            user-select: none;
+        }
+
+        /* Hide native checkbox */
+        .checkbox-label input[type="checkbox"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            left: 0;
+            top: 0;
+            height: 1.25rem;
+            width: 1.25rem;
+            margin: 0;
+        }
+
+        /* Custom box */
+        .custom-checkbox {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 1.25rem;
+            width: 1.25rem;
+            border: 2px solid #0074d9;
+            border-radius: 4px;
+            background: #fff;
+            transition: background 0.15s, border-color 0.2s;
+        }
+
+        /* Checked state */
+        .checkbox-label input[type="checkbox"]:checked ~ .custom-checkbox {
+            background: #0074d9;
+            border-color: #005fa3;
+        }
+
+        /* Check mark (simple tick) */
+        .custom-checkbox:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .checkbox-label input[type="checkbox"]:checked ~ .custom-checkbox:after {
+            display: block;
+        }
+        .checkbox-label .custom-checkbox:after {
+            left: 0.35rem;
+            top: 0.05rem;
+            width: 0.3rem;
+            height: 0.7rem;
+            border: solid #fff;
+            border-width: 0 0.18rem 0.18rem 0;
+            transform: rotate(45deg);
+            content: "";
+        }
+
+        /* Keyboard focus (accessibility) */
+        .checkbox-label input[type="checkbox"]:focus ~ .custom-checkbox {
+            box-shadow: 0 0 0 3px rgba(0, 116, 217, 0.18);
+            outline: none;
+        }
     </style>
 </head>
 <body>
@@ -101,6 +176,15 @@
             <div class="form-group">
                 <label for="password">Heslo</label>
                 <input type="password" id="password" name="password" />
+            </div>
+
+            <!-- Commit 4 – custom checkbox group -->
+            <div class="checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="agree" name="agree" />
+                    <span class="custom-checkbox"></span>
+                    Souhlasím s podmínkami
+                </label>
             </div>
 
             <button type="submit">Odeslat</button>
