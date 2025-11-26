@@ -28,7 +28,7 @@
         }
 
         .form {
-            padding: 0 0.5rem; /* mezera vlevo/vpravo pro inputy */
+            padding: 0 0.5rem;
         }
 
         .form-group {
@@ -52,15 +52,14 @@
             border-radius: 4px;
             font-size: 1rem;
             background: #fff;
-            /* Commit 3 – smooth transition for focus effect */
             transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
         }
 
         /* Commit 3 – highlight input on focus */
         input:focus {
-            border-color: #0074d9; /* silný kontrast */
-            background: #f0f8ff;   /* jemná změna pozadí */
-            outline: none;         /* odstraní defaultní outline */
+            border-color: #0074d9;
+            background: #f0f8ff;
+            outline: none;
         }
 
         /* Commit 3 – clear ring for keyboard accessibility */
@@ -155,6 +154,14 @@
             box-shadow: 0 0 0 3px rgba(0, 116, 217, 0.18);
             outline: none;
         }
+
+        /* Commit 5 – error message under email */
+        .error-message {
+            color: #d90000;
+            font-size: 0.93rem;
+            margin-top: 0.25rem;
+            margin-bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -162,20 +169,33 @@
     <main class="form-wrapper"> 
         <h1>Registrace</h1>
 
-        <form class="form">
+        <form class="form" autocomplete="off" aria-describedby="formdesc" novalidate>
+            <div id="formdesc" style="display:none;">
+                Povinná pole označena hvězdičkou.
+            </div>
             <div class="form-group">
                 <label for="name">Jméno</label>
-                <input type="text" id="name" name="name" />
+                <input type="text" id="name" name="name" autocomplete="off" />
             </div>
 
             <div class="form-group">
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" />
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    aria-describedby="email-error"
+                    required 
+                    autocomplete="off"
+                />
+                <div id="email-error" class="error-message" role="alert" style="display: none;">
+                    Prosím vyplňte správný e-mail.
+                </div>
             </div>
 
             <div class="form-group">
                 <label for="password">Heslo</label>
-                <input type="password" id="password" name="password" />
+                <input type="password" id="password" name="password" autocomplete="off" />
             </div>
 
             <!-- Commit 4 – custom checkbox group -->
@@ -191,5 +211,26 @@
         </form>
     </main>
 
+<!-- Commit 5 – Add ARIA support and error message for email -->
+    <script>
+    const form = document.querySelector('.form');
+    const email = document.getElementById('email');
+    const errorMsg = document.getElementById('email-error');
+
+    form.addEventListener('submit', function(e) {
+        if (!email.checkValidity()) {
+            errorMsg.style.display = 'block';
+            e.preventDefault();
+        } else {
+            errorMsg.style.display = 'none';
+        }
+    });
+
+    email.addEventListener('input', function() {
+        if (email.checkValidity()) {
+            errorMsg.style.display = 'none';
+        }
+    });
+    </script>
 </body>
 </html>
