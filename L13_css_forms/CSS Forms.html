@@ -49,6 +49,20 @@
             border-radius: 4px;
             font-size: 1rem;
             background: #fff;
+            /* Commit 3 – smooth transition for focus effect */
+            transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+        }
+
+        /* Commit 3 – highlight input on focus */
+        input:focus {
+            border-color: #0074d9; 
+            background: #f0f8ff;   
+            outline: none;         
+        }
+
+        /* Commit 3 – clear ring for keyboard accessibility */
+        input:focus-visible {
+            box-shadow: 0 0 0 4px rgba(0, 116, 217, 0.20);
         }
 
         button {
