@@ -27,26 +27,62 @@
         --color-accent: #ff8a50;
       }
     }
+
+    /* Commit 3 – Apply variables to layout */
+    html, body { height: 100%; }
+
+    body {
+      margin: 0;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--base-font);
+      line-height: var(--base-line-height);
+    }
+
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+
+    a:focus,
+    a:focus-visible {
+      outline: 3px solid var(--color-accent);
+      outline-offset: 2px;
+    }
+
+    header {
+      padding: 2rem 1rem;
+    }
+
+    main {
+      padding: 1rem;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    h1, h2 {
+      margin: 0 0 .5rem 0;
+    }
+
+    p {
+      margin: 0 0 1rem 0;
+    }
   </style>
 
 </head>
 
 <body>
-
   <header>
     <h1>My Personal Blog</h1>
     <p>Welcome to my thoughts and stories.</p>
   </header>
 
   <main>
-    
     <article>
       <h2>First Post</h2>
       <p>This is a short intro to my blog. <a href="#">Read more...</a></p>
     </article>
-
   </main>
-  
 </body>
 
 </html>
