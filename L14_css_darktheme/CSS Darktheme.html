@@ -2,28 +2,51 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>  
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Personal Blog</title>
   
+  <title>My Personal Blog</title>
+
   <style>
+    :root {
+      --color-bg: #ffffff;
+      --color-text: #111111;
+      --color-primary: #2a7cff;
+      --color-accent: #ff5722;
+      --base-font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      --base-line-height: 1.5;
+    }
+
+    /* Commit 2 – Create light and dark themes using media query */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-bg: #111111;
+        --color-text: #ffffff;
+        --color-primary: #7abaff;
+        --color-accent: #ff8a50;
+      }
+    }
   </style>
 
 </head>
 
 <body>
+
   <header>
     <h1>My Personal Blog</h1>
     <p>Welcome to my thoughts and stories.</p>
   </header>
 
   <main>
+    
     <article>
       <h2>First Post</h2>
       <p>This is a short intro to my blog. <a href="#">Read more...</a></p>
     </article>
+
   </main>
+  
 </body>
 
 </html>
