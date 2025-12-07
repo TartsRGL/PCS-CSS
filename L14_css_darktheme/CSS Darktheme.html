@@ -31,22 +31,23 @@
     /* Commit 3 – Apply variables to layout */
     html, body { height: 100%; }
 
+    /* Commit 4 – Use fallback values for older browsers */
     body {
       margin: 0;
-      background-color: var(--color-bg);
-      color: var(--color-text);
-      font-family: var(--base-font);
-      line-height: var(--base-line-height);
+      background-color: var(--color-bg, #ffffff);
+      color: var(--color-text, #111111);
+      font-family: var(--base-font, sans-serif);
+      line-height: var(--base-line-height, 1.5);
     }
 
     a {
-      color: var(--color-primary);
+      color: var(--color-primary, blue);
       text-decoration: none;
     }
 
     a:focus,
     a:focus-visible {
-      outline: 3px solid var(--color-accent);
+      outline: 3px solid var(--color-accent, orange);
       outline-offset: 2px;
     }
 
@@ -72,17 +73,21 @@
 </head>
 
 <body>
+
   <header>
     <h1>My Personal Blog</h1>
     <p>Welcome to my thoughts and stories.</p>
   </header>
 
   <main>
+    
     <article>
       <h2>First Post</h2>
       <p>This is a short intro to my blog. <a href="#">Read more...</a></p>
     </article>
+
   </main>
+
 </body>
 
 </html>
