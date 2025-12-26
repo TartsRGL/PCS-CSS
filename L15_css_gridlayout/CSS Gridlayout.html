@@ -7,12 +7,6 @@
   <title>Gallery Grid</title>
 
   <style>
-    /* Commit 5 – Add base color variable */
-    :root {
-      --accent: #4A90E2;
-      --note-bg: #f5f5f5;
-    }
-
     /* Commit 2 – Enable CSS Grid layout for .gallery */
     .gallery {
       display: grid;
@@ -22,12 +16,27 @@
       gap: 1rem;
     }
 
+    /* Commit 3 – Add basic visual styling for .item */
+    /* Commit 5 – Add color + spacing + typography */
+    /* Commit 7 – Final cleanup: variables and visual consistency */
+    /* Commit 7.1 – Visual spacing under hero */
+    
+    main {
+     padding: 2rem 1rem;
+    }
+
+    :root {
+      --accent: #4A90E2;
+      --note-bg: #f5f5f5;
+      --padding: 2rem;
+      --radius: 0.5rem;
+    }
+
     .item {
       background: var(--accent);
       color: white;
-      padding: 2rem;
-      border-radius: 0.5rem;
-
+      padding: var(--padding);
+      border-radius: var(--radius);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -35,10 +44,10 @@
       font-size: 1.2rem;
     }
 
-    /* Commit 6 – Style for hero and footer note */
+    /* Commit 6 – Add hero and footer note blocks */
     .hero {
       text-align: center;
-      padding: 3rem 1rem;
+      padding: calc(var(--padding) * 1.5) 1rem;
       background: black;
       color: white;
       font-size: 1.5rem;
@@ -47,9 +56,10 @@
     .note {
       margin-top: 2rem;
       background: var(--note-bg);
-      padding: 1.5rem;
+      padding: var(--padding);
       border-left: 5px solid var(--accent);
       font-style: italic;
+      border-radius: var(--radius);
     }
   </style>
 </head>
