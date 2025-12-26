@@ -7,6 +7,11 @@
   <title>Gallery Grid</title>
 
   <style>
+    /* Commit 5 – Add base color variable */
+    :root {
+      --accent: #4A90E2;
+    }
+
     /* Commit 2 – Enable CSS Grid layout for .gallery */
     .gallery {
       display: grid;
@@ -14,24 +19,20 @@
       /* Commit 4 – Replace fixed layout with responsive auto-fit */
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1rem;
-
-      /*
-        🔄 Replaces grid-template-areas from Commit 3.
-        We now let the layout adjust automatically to available space.
-
-        Use this pattern for image galleries, cards, lists – when you don’t need precise layout positions.
-        Commit 3 is still useful when you need *exact* control (e.g. dashboard, landing page).
-      */
     }
 
     .item {
-      background: #eee;
-      border: 1px solid #ccc;
-      min-height: 100px;
+      /* Commit 5 – Visual design enhancements */
+      background: var(--accent);
+      color: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: bold;
+      font-size: 1.2rem;
     }
   </style>
 </head>
