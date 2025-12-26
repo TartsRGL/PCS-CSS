@@ -10,25 +10,20 @@
     /* Commit 2 – Enable CSS Grid layout for .gallery */
     .gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      /* Commit 4 – Replace fixed layout with responsive auto-fit */
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1rem;
 
-      /* Commit 3 – Define custom layout using grid-template-areas */
-      grid-template-areas:
-        "a a b"
-        "c d b"
-        "e f f";
+      /*
+        🔄 Replaces grid-template-areas from Commit 3.
+        We now let the layout adjust automatically to available space.
+
+        Use this pattern for image galleries, cards, lists – when you don’t need precise layout positions.
+        Commit 3 is still useful when you need *exact* control (e.g. dashboard, landing page).
+      */
     }
 
-    /* Commit 3 – Assign grid areas to each item */
-    .item-a { grid-area: a; }
-    .item-b { grid-area: b; }
-    .item-c { grid-area: c; }
-    .item-d { grid-area: d; }
-    .item-e { grid-area: e; }
-    .item-f { grid-area: f; }
-
-    /* Commit 3 – Add basic visual styling for .item */
     .item {
       background: #eee;
       border: 1px solid #ccc;
@@ -48,12 +43,12 @@
 
   <main>
     <section class="gallery">
-      <div class="item item-a">A</div>
-      <div class="item item-b">B</div>
-      <div class="item item-c">C</div>
-      <div class="item item-d">D</div>
-      <div class="item item-e">E</div>
-      <div class="item item-f">F</div>
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+      <div class="item">D</div>
+      <div class="item">E</div>
+      <div class="item">F</div>
     </section>
   </main>
 
