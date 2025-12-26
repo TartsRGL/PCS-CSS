@@ -12,6 +12,31 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
+
+      /* Commit 3 – Define custom layout using grid-template-areas */
+      grid-template-areas:
+        "a a b"
+        "c d b"
+        "e f f";
+    }
+
+    /* Commit 3 – Assign grid areas to each item */
+    .item-a { grid-area: a; }
+    .item-b { grid-area: b; }
+    .item-c { grid-area: c; }
+    .item-d { grid-area: d; }
+    .item-e { grid-area: e; }
+    .item-f { grid-area: f; }
+
+    /* Commit 3 – Add basic visual styling for .item */
+    .item {
+      background: #eee;
+      border: 1px solid #ccc;
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
     }
   </style>
 </head>
